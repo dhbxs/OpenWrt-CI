@@ -41,6 +41,7 @@ jobs:
           git clone -b master --single-branch https://github.com/immortalwrt/immortalwrt
       - name: Update feeds
         run: |
+          cd immortalwrt
           ./scripts/feeds update -a
           ./scripts/feeds install -a
       - name: Costom configure file
